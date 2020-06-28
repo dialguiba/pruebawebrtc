@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Screen Sharing using RTCMultiConnection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="/demos/logo.png">  
+</head>
+<body>
+
+  <h1>
+    Screen Sharing using RTCMultiConnection
+    <p class="no-mobile">
+      Multi-user (one-to-many) screen sharing using star topology.
+    </p>
+  </h1>
+
+  <section class="make-center">
+    <input type="text" id="room-id" value="abcdef" autocorrect=off autocapitalize=off size=20>
+    <button id="open-room">Open Room</button>
+
+
+    <div id="videos-container" style="margin: 20px 0;"></div>
+
+    <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
+  </section>
+
+<script src="/dist/RTCMultiConnection.js"></script>
+<script src="/node_modules/webrtc-adapter/out/adapter.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- custom layout for HTML5 audio/video elements -->
+<link rel="stylesheet" href="/dev/getHTMLMediaElement.css">
+<script src="/dev/getHTMLMediaElement.js"></script>
+<script src="./screen-sharing-streamer.js"></script>
+
+<!-- <script src="https://www.webrtc-experiment.com/common.js"></script> -->
+</body>
+</html>
